@@ -12,6 +12,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- Dashboard
+    {
+        "goolord/alpha-nvim",
+        dependencies = {
+            'echasnovski/mini.icons',
+            'nvim-lua/plenary.nvim'
+        },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.theta'.config)
+        end
+    },
+
     -- Colorscheme
     "rebelot/kanagawa.nvim",
 
@@ -124,6 +136,13 @@ require("lazy").setup({
         },
         lazy = false,
     },
+
+    {
+        "akinsho/toggleterm.nvim",
+        config = true,
+    },
+
+    "ThePrimeagen/vim-be-good",
 
     opts_extend = { "sources.default" }
 })

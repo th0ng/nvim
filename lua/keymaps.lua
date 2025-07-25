@@ -26,16 +26,20 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
 -- Buffer
 -- Close buffer, avoid closing nvim when deleting the last buffer
-vim.keymap.set('n', '<leader>w', ':bp | bd #<CR>', opts)
+-- vim.keymap.set('n', '<leader>w', ':bp | bd #<CR>', opts)
 -- Close all except current buffer
-vim.keymap.set('n', '<leader>W', ':w | %bd | e# | bd#<CR>', opts)
+-- vim.keymap.set('n', '<leader>W', ':w | %bd | e# | bd#<CR>', opts)
 
 -- Telescope
-vim.keymap.set('n', 'ff', ':Telescope find_files<CR>', opts)
-vim.keymap.set('n', 'fb', ':Telescope buffers<CR>', opts)
-vim.keymap.set('n', 'fg', ':Telescope live_grep<CR>', opts)
+--vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+-- vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', opts)
+-- vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 
--- Tree
-vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', opts)
-vim.keymap.set('n', '<leader>b', '<cmd>Neotree focus buffers<CR>', opts)
-vim.keymap.set('n', '<leader>g', '<cmd>Neotree focus git_status float<CR>', opts)
+-- neo-tree
+-- vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', opts)
+-- vim.keymap.set('n', '<leader>b', '<cmd>Neotree focus buffers toggle<CR>', opts)
+-- vim.keymap.set('n', '<leader>g', '<cmd>Neotree focus git_status float<CR>', opts)
+
+-- Better scroll
+vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
+vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)

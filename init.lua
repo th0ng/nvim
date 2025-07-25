@@ -3,6 +3,8 @@ require('keymaps')
 require('plugins')
 require('colorscheme')
 require('bufferline-config')
+require('toggleterm-config')
+require('whichkey')
 
 -- Ensure Neovim does not override the terminal's background:
 vim.o.background = "dark"
